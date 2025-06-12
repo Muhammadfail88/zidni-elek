@@ -1,114 +1,87 @@
-<!DOCTYPE html><html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Undangan Pernikahan</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap');body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(to bottom, #fff5f5, #ffe6e6);
-  color: #333;
-}
-.container {
-  max-width: 700px;
-  margin: auto;
-  background: #fff;
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  margin-top: 60px;
-  text-align: center;
-}
-h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  color: #c0392b;
-  margin-bottom: 0;
-}
-.names {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
-}
-.details {
-  text-align: left;
-  margin-top: 2rem;
-  line-height: 1.8;
-  font-size: 1.1rem;
-}
-.map {
-  margin-top: 1rem;
-}
-.map iframe {
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  height: 300px;
-}
-.footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 2rem;
-}
-.rsvp {
-  margin-top: 2rem;
-}
-.rsvp input, .rsvp button {
-  padding: 10px;
-  font-size: 1rem;
-  margin: 0.3rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-.rsvp button {
-  background-color: #25D366;
-  color: white;
-  cursor: pointer;
-}
 
-  </style>
-  <script>
-    function kirimWA() {
-      const nama = document.getElementById("nama").value.trim();
-      if (!nama) {
-        alert("Mohon isi nama terlebih dahulu.");
-        return;
-      }
-      const nomor = "6285733356393"; // Nomor WhatsApp tujuan
-      const pesan = `Halo! Saya, ${nama}, akan hadir di acara Raka & Dinda pada 20 Juli 2025.`;
-      const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
-      window.open(url, '_blank');
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan Zidni & Fail</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: #fffaf5;
+      color: #333;
+      text-align: center;
     }
-  </script>
+    .countdown {
+      font-size: 2em;
+      margin-top: 20%;
+    }
+    .main-content {
+      display: none;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 90%%;
+      max-width: 400px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    .btn-rsvp {
+      background-color: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.2em;
+      display: inline-block;
+      margin: 20px 0;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Undangan Pernikahan</h1>
-    <div class="names">Raka & Dinda</div>
-    <p>Dengan penuh cinta dan harapan, kami mengundang Anda untuk hadir dalam hari bahagia kami:</p><div class="details">
-  <strong>Tanggal:</strong> Sabtu, 20 Juli 2025<br>
-  <strong>Waktu:</strong> 10.00 WIB - selesai<br>
-  <strong>Tempat:</strong> Gedung Serbaguna Nusantara, Jakarta Selatan<br>
-  <div class="map">
-    <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy"></iframe>
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/11/16/audio_b491dba999.mp3" type="audio/mp3">
+</audio>
+
+<div id="countdown" class="countdown">
+  Undangan akan terbuka dalam <span id="seconds">10</span> detik...
+</div>
+
+<div id="main" class="main-content">
+  <h2>Bismillahirrahmanirrahim</h2>
+  <p>Assalamu’alaikum Warahmatullahi Wabarakatuh.</p>
+  <p>Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:</p>
+  <h1>Zidni & Fail</h1>
+  <p>Dengan segala hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada acara pernikahan kami yang InsyaAllah akan diselenggarakan di:</p>
+  <p><strong>Jl. Kyai Sofyan Yusuf RT 05 RW 01</strong></p>
+
+  <div class="gallery">
+    <img src="img/foto1.jpg" alt="Foto 1">
+    <img src="img/foto2.jpg" alt="Foto 2">
   </div>
+
+  <h3>Berikan Doa Restu</h3>
+  <a class="btn-rsvp" href="https://wa.me/6285733356393?text=Assalamualaikum%2C%20saya%20mengucapkan%20selamat%20atas%20pernikahan%20Zidni%20dan%20Fail.%20Semoga%20menjadi%20keluarga%20yang%20sakinah%2C%20mawaddah%2C%20warahmah." target="_blank">
+    Kirim Doa via WhatsApp
+  </a>
 </div>
 
-<div class="rsvp">
-  <h3>Konfirmasi Kehadiran via WhatsApp</h3>
-  <input type="text" id="nama" placeholder="Nama Anda" required />
-  <button onclick="kirimWA()">Kirim ke WhatsApp</button>
-</div>
+<script>
+  let seconds = 10;
+  const countdownEl = document.getElementById("seconds");
+  const countdownDiv = document.getElementById("countdown");
+  const mainContent = document.getElementById("main");
 
-<div class="footer">
-  Raka & Dinda ❤️ 2025 | Sampai jumpa di hari bahagia kami!
-</div>
-
-  </div>  <!-- Musik Latar -->  <audio autoplay loop hidden>
-    <source src="https://example.com/music.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung audio.
-  </audio>
+  const timer = setInterval(() => {
+    seconds--;
+    countdownEl.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(timer);
+      countdownDiv.style.display = "none";
+      mainContent.style.display = "block";
+    }
+  }, 1000);
+</script>
 </body>
 </html>
