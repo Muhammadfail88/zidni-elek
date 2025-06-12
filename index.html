@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Pernikahan</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap');body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom, #fff5f5, #ffe6e6);
+  color: #333;
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-top: 60px;
+  text-align: center;
+}
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #c0392b;
+  margin-bottom: 0;
+}
+.names {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.details {
+  text-align: left;
+  margin-top: 2rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+.map {
+  margin-top: 1rem;
+}
+.map iframe {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  height: 300px;
+}
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 2rem;
+}
+.rsvp {
+  margin-top: 2rem;
+}
+.rsvp input, .rsvp button {
+  padding: 10px;
+  font-size: 1rem;
+  margin: 0.3rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.rsvp button {
+  background-color: #25D366;
+  color: white;
+  cursor: pointer;
+}
+
+  </style>
+  <script>
+    function kirimWA() {
+      const nama = document.getElementById("nama").value.trim();
+      if (!nama) {
+        alert("Mohon isi nama terlebih dahulu.");
+        return;
+      }
+      const nomor = "6285733356393"; // Nomor WhatsApp tujuan
+      const pesan = `Halo! Saya, ${nama}, akan hadir di acara Raka & Dinda pada 20 Juli 2025.`;
+      const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Undangan Pernikahan</h1>
+    <div class="names">Raka & Dinda</div>
+    <p>Dengan penuh cinta dan harapan, kami mengundang Anda untuk hadir dalam hari bahagia kami:</p><div class="details">
+  <strong>Tanggal:</strong> Sabtu, 20 Juli 2025<br>
+  <strong>Waktu:</strong> 10.00 WIB - selesai<br>
+  <strong>Tempat:</strong> Gedung Serbaguna Nusantara, Jakarta Selatan<br>
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+
+<div class="rsvp">
+  <h3>Konfirmasi Kehadiran via WhatsApp</h3>
+  <input type="text" id="nama" placeholder="Nama Anda" required />
+  <button onclick="kirimWA()">Kirim ke WhatsApp</button>
+</div>
+
+<div class="footer">
+  Raka & Dinda ❤️ 2025 | Sampai jumpa di hari bahagia kami!
+</div>
+
+  </div>  <!-- Musik Latar -->  <audio autoplay loop hidden>
+    <source src="https://example.com/music.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+</body>
+</html>
